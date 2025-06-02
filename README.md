@@ -111,37 +111,39 @@ Write a C program to perform addition and subtraction of two numbers using funct
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-int add(int,int);
-int sub(int,int);
-int main()
-{
-    int a,b,c,d;
-    scanf("%d%d",&a,&b);
-    c = add(a,b);
-    d = sub(a,b);
-    printf("Addition: %d\n",c);
-    printf("Subtraction: %d",d);
+#include <stdio.h>
+
+void add(int a, int b) {
+    int sum = a + b;
+    printf("Addition = %d\n", sum);
 }
-int add(int x,int y)
-{
-    int z;
-    z = x + y;
-    return z;
+
+void subtract(int a, int b) {
+    int difference = a - b;
+    printf("Subtraction = %d\n", difference);
 }
-int sub(int x,int y)
-{
-    int z;
-    z = x - y;
-    return z;
+
+int main() {
+    int num1, num2;
+
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+
+    add(num1, num2);
+    subtract(num1, num2);
+
+    return 0;
 }
+
 ```
 
 
 ## OUTPUT:
 
-
-![Screenshot 2025-04-27 205254](https://github.com/user-attachments/assets/9ab70042-2e4e-4a5f-a6c1-37439ca0bfe9)
+![image](https://github.com/user-attachments/assets/ecb8f49a-bf23-40b1-a408-89309d3a8ba8)
 
 
 
@@ -217,24 +219,40 @@ d.	After the loop, print the factorial value.
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-int main()
-{
-    int n,fact=1;
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++)
-    {
-        fact*=i;
+#include <stdio.h>
+
+int factorial(int n) {
+    int fact = 1;
+    for(int i = 1; i <= n; i++) {
+        fact *= i;
     }
-    printf("Factorial value is: %d",fact);
+    return fact;
+}
+
+int main() {
+    int num;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if(num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+
+        int result = factorial(num);
+        printf("Factorial of %d is: %d\n", num, result);
+    }
+
     return 0;
 }
+
 
 ```
 
 
 ## OUTPUT:
-![Screenshot 2025-04-27 205947](https://github.com/user-attachments/assets/2cde84c4-0179-48ad-89a1-f6b50763624c)
+![image](https://github.com/user-attachments/assets/2e78f9dd-72c8-43bb-b49d-3852f5ba7521)
+
 
 
 
